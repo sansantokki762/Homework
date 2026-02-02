@@ -1,0 +1,35 @@
+div.footer {
+    height: 150px;
+    width: 100%;
+    display: grid;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.menu {
+    display: flex;
+    width: 100%;
+}
+.menu p {
+    padding: 0 15px;
+}
+.info {
+    display: flex;
+    gap: 10vw;
+    padding: 15px 15px;    
+}
+.space {
+    height: 100%;
+    width: 20%;
+    position: relative;
+}
+.info p {
+    margin: 0 0;
+}
+.info .thick {
+    font-weight: bold;  
+    font-size: 32px;
+}
+.copy {
+    padding-top: 48px;
+}

@@ -35,6 +35,7 @@
     height: 50px;
     color: blueviolet;
 }
+
 @media screen and (max-width:768px) {
     .box {
         flex-direction: column;
