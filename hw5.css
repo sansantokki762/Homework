@@ -1,0 +1,31 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+header {
+    height: 20vh;
+    width: 100%;   
+    background-color: lemonchiffon;
+    display: flex;
+    justify-content: center;
+}
+p {
+    position: relative;
+    font-size: larger;
+    align-self: flex-end;
+    padding: 0 10px;
+}
+p::after {
+    content:'';
+    left: 0;
+    bottom: 0;
+    position: absolute;
+    width: 100%;
+    transition: all 0.5s;
+    transform: scaleX(0);
+    border-bottom: 6px solid orange;
+}
+p:hover::after {
+    transform: scaleX(1)
+}
