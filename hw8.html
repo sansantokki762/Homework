@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        body {
+            background: black;
+            height: 6000px;
+            font-family: 'nanunsquare';
+        }
+        div {
+            position: relative;
+            top: 80px;
+            margin-top: 1000px;
+            color: white;
+            text-align: center;
+            opacity: 0;
+            transition: all 0.5s;
+        }
+    </style>
+    <div><h1>jinwoo</h1></div>
+    <div><h1>subsub</h1></div>
+    <div><h1>seohung@y</h1></div>
+    <div><img src="https://ichef.bbci.co.uk/ace/standard/976/cpsprodpb/165C4/production/_121888519_parag-agarwal_hires.jpg" alt=""></div>
+
+    <script>
+        let observer = new IntersectionObserver((e) => { // 요소가 생성될 때
+            console.log(e)
+            e.forEach((good, index, array)=>{ // 객체 하나 하나 꺼내서 함수안에 넣어 실행
+                console.log(good)
+                if (good.isIntersecting) { // 보일 때
+                    good.target.style.opacity = 1;
+                    good.target.style.top = 0;
+                } else {
+                    good.target.style.top = '80px';
+                    good.target.style.opacity = 0;
+                }
+            })
+        })
+        let observer1 = new IntersectionObserver()
+
+
+        let div = document.querySelectorAll('div')
+
+        observer.observe(div[0])
+        observer.observe(div[1])
+        observer.observe(div[2])
+        observer.observe(div[3])
+        
+        let numbers = [1,2,3,4,5]; // <= array[index]
+
+        numbers.forEach(function double (num, index, array) {
+            console.log(`값 ${num}`)
+            console.log(`now index ${index}`)
+            console.log(array)
+
+            array[index] = num * 2 // numbers[0] = 1 * 2
+            console.log(numbers)
+        })
+
+
+
+
+    </script>
+</body>
+</html>
